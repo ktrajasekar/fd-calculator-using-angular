@@ -1,0 +1,30 @@
+.container {
+  max-width: 80vw;
+  border: #ccc 2px solid;
+  margin:20px auto 20px auto;
+}
+
+.controls input {
+  width: 100%;
+}
+
+.input-label span {
+  text-align: right;
+  display: block;
+  float: right;
+}
+
+.input-label {
+  margin-bottom: 10px;
+}
+
+.input-row {
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 17px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: #ddd 1px solid;
+}

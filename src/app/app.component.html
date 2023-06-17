@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <h3>Fixed Depoist Calculator</h3>
+    <div class="col-sm-6">
+      <div class="input-row">
+        <div class="input-label">
+          Total Investment <span>Rs.{{principalAmount}}</span>
+        </div>
+        <div class="controls">
+          <input type="range" min="5000" max="10000" [(ngModel)]="principalAmount" (change)="calculate()">
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="input-label">
+          Rate of Interest (P.A) <span>{{interestRate}} %</span>
+        </div>
+        <div class="controls">
+          <input type="range" min="6" max="15" step="0.5" [(ngModel)]="interestRate" (change)="calculate()">
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="input-label">
+          Time Period <span> {{tenureMonths}} Months</span>
+        </div>
+        <div class="controls">
+          <input type="range" min="1" max="100" [(ngModel)]="tenureMonths" (change)="calculate()">
+        </div>
+      </div>
+      <div class="input-row" *ngIf="calculated">
+        <!-- <button (click)="calculate()">Calculate</button> -->
+        <h4>Results</h4>
+        <div class="results row" >
+          <div class="col-sm-6">Interest Earned</div>
+          <div class="col-sm-6">{{interestEarned}}</div>
+        </div>
+        <div class="results row">
+          <div class="col-sm-6">Total Amount</div>
+          <div class="col-sm-6">{{finalAmount}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div  *ngIf="calculated" echarts [options]="options" [theme]="theme" class="demo-chart" [merge]="updateOptions"></div>
+    </div>
+  </div>
+</div>
