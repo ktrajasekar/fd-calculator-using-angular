@@ -1,4 +1,8 @@
-# Fd
+# Fixed Calculator using Angular
+
+### Screenshot 
+![image](https://github.com/ktrajasekar/fd-calculator-using-angular/assets/430431/a4b26db0-2d99-4467-8ba5-82227163c1ca)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
