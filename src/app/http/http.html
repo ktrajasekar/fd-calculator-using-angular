@@ -1,0 +1,23 @@
+<div class="container http">
+  <div class="row">
+    <div class="col-sm-4">GET</div>
+    <div class="col-sm-4"><button (click)="getAPI()"> GET</button></div>
+    <div class="col-sm-4">Response: {{responseData && responseData|json}}</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">POST</div>
+    <div class="col-sm-4"><button (click)="createTodo()"> POST</button></div>
+    <div class="col-sm-4">Response: {{createdResponse}}</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">UPDATE</div>
+    <div class="col-sm-4"><button (click)="updateTodo()"> UPDATE</button></div>
+    <div class="col-sm-4">Response: {{updatedResponse}}</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">DELETE</div>
+    <div class="col-sm-4"><button (click)="deleteTodo()"> DELETE</button></div>
+    <div class="col-sm-4">Response: {{deletedResponse}}</div>
+  </div>
+
+</div>
